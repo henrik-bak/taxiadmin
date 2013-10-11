@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="731.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Label layoutX="14.0" layoutY="21.0" text="Regisztrált felhasználók:">
+      <font>
+        <Font size="14.0" />
+      </font>
+    </Label>
+    <TableView layoutX="14.0" layoutY="55.0" prefHeight="187.0" prefWidth="703.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="58.0" text="ID" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="155.0" text="Keresztnév" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="156.0" text="Vezetéknév" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="168.0" text="Telefonszám" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="164.0" text="Email" />
+      </columns>
+    </TableView>
+    <TitledPane animated="false" layoutX="14.0" layoutY="255.0" prefHeight="238.0" prefWidth="351.5" text="Regisztráció">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <TextField layoutX="118.0" layoutY="14.0" prefWidth="200.0" />
+            <TextField layoutX="118.0" layoutY="46.0" prefWidth="200.0" />
+            <TextField layoutX="118.0" layoutY="80.0" prefWidth="200.0" />
+            <TextField layoutX="118.0" layoutY="117.0" prefWidth="200.0" />
+            <TextField layoutX="118.0" layoutY="154.0" prefWidth="200.0" />
+            <Label layoutX="14.0" layoutY="17.0" text="Keresztnév:" />
+            <Label layoutX="14.0" layoutY="49.0" text="Vezetéknév:" />
+            <Label layoutX="14.0" layoutY="83.0" text="Telefonszám:" />
+            <Label layoutX="14.0" layoutY="120.0" text="Email:" />
+            <Label layoutX="14.0" layoutY="157.0" text="Jelszó" />
+            <Button layoutX="145.0" layoutY="182.0" mnemonicParsing="false" text="Regisztráció" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" layoutX="389.0" layoutY="255.0" prefHeight="241.0" prefWidth="328.0" text="Keresés">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <TextField layoutX="118.0" layoutY="14.0" prefWidth="200.0" />
+            <TextField layoutX="118.0" layoutY="46.0" prefWidth="200.0" />
+            <TextField layoutX="118.0" layoutY="80.0" prefWidth="200.0" />
+            <TextField layoutX="118.0" layoutY="117.0" prefWidth="200.0" />
+            <Label layoutX="14.0" layoutY="17.0" text="Keresztnév:" />
+            <Label layoutX="14.0" layoutY="49.0" text="Vezetéknév:" />
+            <Label layoutX="14.0" layoutY="83.0" text="Telefonszám:" />
+            <Label layoutX="14.0" layoutY="120.0" text="Email:" />
+            <Label layoutX="14.0" layoutY="154.0" text="ID:" />
+            <TextField layoutX="118.0" layoutY="154.0" prefWidth="200.0" />
+            <Button layoutX="132.0" layoutY="181.0" mnemonicParsing="false" text="Keresés" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+  </children>
+</AnchorPane>
