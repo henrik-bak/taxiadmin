@@ -20,7 +20,7 @@ public class MainApplication extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("../fxml/Main.fxml"));
         Scene scene = new Scene(root);        
-        stage.setTitle("MyJavaFX");
+        stage.setTitle("Gurulotaxi admin");
         stage.setScene(scene);
         stage.show();
     }

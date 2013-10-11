@@ -26,6 +26,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
@@ -62,6 +63,8 @@ public class UserController implements Initializable {
     private Button registerBtn;
     @FXML
     private Button deleteBtn;
+    @FXML
+    private TextArea responseArea;
     final ObservableList<Clientuser> clientList = FXCollections.observableArrayList();
     
     Clientuser selectedUser;
@@ -73,7 +76,7 @@ public class UserController implements Initializable {
                 passwordTextField.getText(), passwordTextField.getText(), phoneTextField.getText());
         
         JsonResponse response = CommunicationService.postObject(url, user);
-        System.out.println(response.toString());
+        responseArea.setText(response.toString());
         getUsers();
     }
 
@@ -83,6 +86,7 @@ public class UserController implements Initializable {
         String url = ServerUtil.SERVER_BASE_URL + "user/delete";
         
         JsonResponse response = CommunicationService.postObject(url, selectedUser.getIdClientUser());
+        responseArea.setText(response.toString());
         }
         getUsers();
     }

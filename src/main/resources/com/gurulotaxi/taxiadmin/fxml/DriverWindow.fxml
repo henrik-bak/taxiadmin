@@ -53,5 +53,15 @@
         </AnchorPane>
       </content>
     </TitledPane>
+    <Button layoutX="554.0" layoutY="21.0" mnemonicParsing="false" onAction="#deleteBtnClick" text="Kijelölt törlése" />
+    <TitledPane animated="false" layoutX="16.0" layoutY="407.0" prefWidth="703.0" text="Válasz a szervertől">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="65.0" prefWidth="699.0">
+          <children>
+            <TextArea fx:id="responseArea" layoutX="0.0" layoutY="5.0" prefHeight="52.0" prefWidth="699.0" wrapText="true" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
   </children>
 </AnchorPane>
