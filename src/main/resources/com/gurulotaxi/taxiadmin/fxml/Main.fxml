@@ -11,15 +11,32 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="569.0" prefWidth="759.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.pdfsplitandmerge.controller.MainWindowController">
+<AnchorPane id="AnchorPane" prefHeight="569.0" prefWidth="759.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.gurulotaxi.taxiadmin.controller.MainController">
   <children>
     <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
     <TabPane layoutX="14.0" layoutY="14.0" prefHeight="541.0" prefWidth="731.0" tabClosingPolicy="UNAVAILABLE">
       <tabs>
-        <Tab content="$null" text="Felhasználók" />
-        <Tab text="Sofőrök" />
-        <Tab text="Taxik" />
-        <Tab text="Rendelések" />
+        <Tab text="Felhasználók" >
+            <VBox>
+            <children>
+              <fx:include source="UserWindow.fxml" />
+            </children>
+          </VBox>
+        </Tab>
+        <Tab text="Sofőrök" >
+            <VBox>
+            <children>
+              <fx:include source="DriverWindow.fxml" />
+            </children>
+          </VBox>
+          </Tab>
+        <Tab text="Rendelések" >
+            <VBox>
+            <children>
+              <fx:include source="OrderWindow.fxml" />
+            </children>
+          </VBox>
+          </Tab>
       </tabs>
     </TabPane>
   </children>
