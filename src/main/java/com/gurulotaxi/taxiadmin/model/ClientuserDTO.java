@@ -13,8 +13,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class ClientuserDTO {
     private String email;
-    private String fName;
-    private String lName;
+    private String fname;
+    private String lname;
     private String password1;
     private String password2;
     private String phone;
@@ -25,27 +25,27 @@ public class ClientuserDTO {
     
     public ClientuserDTO(String email, String fName, String lName, String password1, String password2, String phone) {
         this.email = email;
-        this.fName = fName;
-        this.lName = lName;
+        this.fname = fName;
+        this.lname = lName;
         this.password1 = password1;
         this.password2 = password2;
         this.phone = phone;
     }
      
     public String getFName() {
-        return fName;
+        return fname;
     }
      
     public void setFName(String firstName) {
-        this.fName = firstName;
+        this.fname = firstName;
     }
   
     public String getLName() {
-        return lName;
+        return lname;
     }
   
     public void setLName(String lastName) {
-        this.lName = lastName;
+        this.lname = lastName;
     }
   
     public String getEmail() {
@@ -82,7 +82,7 @@ public class ClientuserDTO {
       
     @Override
     public String toString() {
-        return "User [email=" + email + ", fName=" + fName
-                + ", lName=" + lName + ", password1=" + password1 +", password2=" + password2 + "]";
+        return "User [email=" + email + ", fName=" + fname
+                + ", lName=" + lname + ", password1=" + password1 +", password2=" + password2 + "]";
     }
 }

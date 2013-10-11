@@ -61,4 +61,9 @@ public class JsonResponse {
     public void setData(Object data) {
         this.data = data;
     }
+
+    @Override
+    public String toString() {
+        return "JsonResponse{" + "status=" + status + ", message=" + message + ", fieldErrors=" + fieldErrors + ", data=" + data + '}';
+    }
 }

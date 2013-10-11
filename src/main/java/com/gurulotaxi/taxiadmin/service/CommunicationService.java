@@ -21,7 +21,7 @@ import java.net.URLConnection;
  */
 public class CommunicationService {
 
-    public JsonResponse getResponse(String url) throws IOException {
+    public static JsonResponse getResponse(String url) throws IOException {
         Gson myGson = new Gson();
 
         URLConnection urlConnection = new URL(url).openConnection();
@@ -35,7 +35,7 @@ public class CommunicationService {
         return myGson.fromJson(rootElement, JsonResponse.class);
     }
 
-    public JsonResponse postObject(String serviceUrl, Object object) throws IOException {
+    public static JsonResponse postObject(String serviceUrl, Object object) throws IOException {
         URL url = new URL(serviceUrl);
         URLConnection connection = url.openConnection();
         connection.setDoOutput(true);
@@ -46,6 +46,7 @@ public class CommunicationService {
         try (OutputStreamWriter out = new OutputStreamWriter(
                 connection.getOutputStream())) {
             gson = new Gson();
+            System.out.println(gson.toJson(object));
             out.write(gson.toJson(object));
         }
 
