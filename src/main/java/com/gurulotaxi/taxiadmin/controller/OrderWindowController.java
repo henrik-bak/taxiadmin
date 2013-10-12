@@ -79,9 +79,9 @@ public class OrderWindowController implements Initializable {
     @FXML
     private void deleteBtnClick(ActionEvent event) throws IOException {
         if (order != null) {
-        String url = ServerUtil.SERVER_BASE_URL + "order/delete";
+        String url = ServerUtil.SERVER_BASE_URL + "order/delete?orderid="+order.getIdOrder();
         
-        JsonResponse response = CommunicationService.postObject(url, order.getIdOrder());
+        JsonResponse response = CommunicationService.postObject(url,null);
         responseArea.setText(response.toString());
         }
         getOrders();

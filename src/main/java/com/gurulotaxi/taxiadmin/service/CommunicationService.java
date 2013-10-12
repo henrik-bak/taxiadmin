@@ -47,7 +47,10 @@ public class CommunicationService {
                 connection.getOutputStream())) {
             gson = new Gson();
             System.out.println(gson.toJson(object));
-            out.write(gson.toJson(object));
+            if (object != null)
+                out.write(gson.toJson(object));
+            else
+                out.write("");
         }
 
         JsonReader reader = new JsonReader(
